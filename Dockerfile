@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 
+RUN rustup default stable
+
 # Install cargo-binstall
 RUN cargo install cargo-binstall
 
